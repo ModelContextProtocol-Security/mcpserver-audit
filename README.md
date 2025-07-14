@@ -1,221 +1,214 @@
 # MCP Server Audit
 
-**Security and functionality auditing tool for MCP servers. Performs comprehensive security assessments, vulnerability scanning, and safety validation of Model Context Protocol implementations to ensure secure deployment.**
+**MCP security expert and tutor. Teaches users how to evaluate MCP server security, understand threat models, and perform risk assessments while providing practical security analysis capabilities and guidance.**
 
 ## Overview
 
-MCP Server Audit is a comprehensive security and functionality assessment tool designed to evaluate Model Context Protocol servers for production readiness. Whether you're vetting a server discovered through mcpserver-finder, conducting due diligence before deployment, or performing ongoing security assessments, this tool provides thorough analysis across multiple security dimensions.
+MCP Server Audit is your expert security advisor for evaluating Model Context Protocol servers. Rather than just being an automated scanner, it serves as a knowledgeable security tutor who teaches you how to think about MCP-specific threats, understand risk assessment, and develop the skills to evaluate server security independently.
 
-The tool goes beyond basic security scanning to provide holistic evaluation including code quality, protocol compliance, operational security, and deployment safety. It begins by establishing clear audit objectives and scope based on the user's specific needs—whether technical validation, architectural review, compliance assessment, or comprehensive security evaluation. The tool generates detailed audit reports that serve as evidence for security compliance, risk assessment, and operational decision-making.
+The server combines security education with practical analysis capabilities, helping you understand not just whether a server has security issues, but how to evaluate security risks systematically. It teaches you the security mindset, walks you through threat modeling, and helps you develop the expertise to make informed security decisions.
 
-## Key Features
+## Expert-Guided Approach
 
-- **Multi-Layered Security Analysis**: Comprehensive evaluation across code, protocol, and operational security dimensions
-- **Vulnerability Detection**: Identifies known and potential security weaknesses in MCP implementations
-- **Compliance Assessment**: Evaluates adherence to MCP security best practices and specifications
-- **Functionality Validation**: Verifies that servers actually perform as documented
-- **Risk Scoring**: Provides quantitative risk assessment for informed decision-making
-- **Audit Trail Generation**: Creates detailed reports suitable for compliance and governance
+This MCP server is designed as an **expert advisor and tutor** in its domain, with the primary focus on providing guidance, education, and practical recommendations rather than being a comprehensive implementation tool. While it includes enough functional capability to be immediately useful and demonstrate real expertise, the long-term vision is for this server to serve as your domain expert who helps you understand the landscape, evaluate options, and find the right tools for your specific needs. As the MCP ecosystem evolves, this server will learn about new tools and approaches, recommending the best solutions while teaching you how to evaluate and use them effectively. The broader Model Context Protocol Security initiative may also develop comprehensive implementation tools, but these specific repositories are focused on being practical expert guidance systems—combining deep domain knowledge with enough hands-on capability to provide genuine value, not just theoretical advice.
 
-## Goals and Strategies
+## Key Capabilities
 
-### Primary Goals
+### Security Education
+- **Threat Model Teaching**: Explains MCP-specific security risks and attack vectors
+- **Risk Assessment Training**: Teaches systematic approaches to evaluating security risks
+- **Vulnerability Recognition**: Helps you identify common security weaknesses and patterns
+- **Security Mindset Development**: Builds your ability to think like an attacker and defender
+- **Best Practices Instruction**: Shares proven security evaluation methodologies
 
-1. **Define Clear Audit Objectives**: Establish specific audit purpose, scope, and success criteria based on user needs
-2. **Ensure MCP Server Security**: Identify and document security vulnerabilities before deployment
-3. **Validate Functionality Claims**: Verify that servers actually deliver promised capabilities
-4. **Assess Production Readiness**: Evaluate overall quality and reliability for production use
-5. **Generate Compliance Evidence**: Create audit reports suitable for security and compliance requirements
-6. **Support Risk-Based Decisions**: Provide quantitative and qualitative risk assessments
-7. **Feed Vulnerability Intelligence**: Contribute findings to community vulnerability databases
+### Practical Analysis
+- **Basic Security Scanning**: Performs fundamental security checks and analysis
+- **Code Review Guidance**: Helps you understand what to look for in security reviews
+- **Configuration Assessment**: Evaluates security-relevant configuration options
+- **Dependency Analysis**: Checks for known vulnerabilities in dependencies
+- **Protocol Compliance**: Verifies adherence to MCP security specifications
 
-### Core Strategies
+### Expert Orchestration
+- **Security Tool Recommendations**: Suggests specialized security analysis tools when needed
+- **Expert Referrals**: Connects you with security professionals for complex issues
+- **Methodology Sharing**: Teaches advanced security evaluation techniques
+- **Resource Guidance**: Points you to security resources and documentation
+- **Incident Response**: Provides guidance on handling discovered security issues
 
-#### 1. Multi-Dimensional Security Assessment
-- **Static Code Analysis**: Examine source code for security vulnerabilities and code quality issues
-- **Protocol Compliance Testing**: Validate adherence to MCP specification and security guidelines
-- **Dependency Analysis**: Assess third-party libraries and dependencies for known vulnerabilities
-- **Configuration Security**: Evaluate default configurations and security settings
-- **Authentication/Authorization**: Test access controls and permission models
-- **Input Validation**: Assess handling of untrusted inputs and prompt injection resistance
+## Goals and Teaching Approach
 
-#### 2. Threat-Specific Evaluation
-- **Prompt Injection Testing**: Evaluate resistance to malicious prompts and indirect attacks
-- **Confused Deputy Analysis**: Test for improper authorization and privilege escalation
-- **Token Security Review**: Assess OAuth token handling and storage security
-- **Data Exfiltration Prevention**: Evaluate controls against unauthorized data access
-- **Cross-Origin Security**: Test for cross-domain and cross-service security issues
-- **Supply Chain Security**: Assess risks from dependencies and distribution channels
+### Primary Educational Goals
 
-#### 3. Functional Validation Framework
-- **Capability Verification**: Test that advertised features actually work as documented
-- **Performance Assessment**: Evaluate resource usage and scalability characteristics
-- **Error Handling Review**: Test error conditions and failure modes
-- **Integration Testing**: Validate compatibility with common MCP clients
-- **Documentation Accuracy**: Verify documentation matches actual behavior
-- **Regression Testing**: Check for issues introduced by updates
+1. **Develop Security Thinking**: Teach users to approach MCP servers with a security mindset
+2. **Build Risk Assessment Skills**: Help users evaluate and communicate security risks effectively
+3. **Foster Threat Awareness**: Educate about MCP-specific threats and attack vectors
+4. **Promote Security Best Practices**: Share knowledge about secure development and deployment
+5. **Enable Independent Analysis**: Provide frameworks for conducting security evaluations
+6. **Build Community Security Knowledge**: Contribute to collective understanding of MCP security
 
-#### 4. Comprehensive Reporting System
-- **Executive Summary**: High-level risk assessment and recommendations
-- **Technical Findings**: Detailed vulnerability descriptions and remediation guidance
-- **Compliance Matrix**: Mapping to security standards and best practices
-- **Risk Scoring**: Quantitative assessment using industry-standard frameworks
-- **Evidence Documentation**: Detailed proof of findings for verification
-- **Remediation Roadmap**: Prioritized action items with timelines
+### Teaching Strategies
 
-## High-Level Workflow
+#### 1. Interactive Security Learning
+- **Threat Modeling Sessions**: Walks you through identifying and analyzing threats
+- **Risk Assessment Practice**: Hands-on experience with security risk evaluation
+- **Vulnerability Analysis**: Guided examination of real security issues
+- **Attack Scenario Planning**: Explores how attacks might unfold
+- **Defense Strategy Development**: Teaches mitigation and protection approaches
 
-### Phase 1: Audit Planning and Scoping
-1. **Purpose Definition**: Establish audit objectives - technical validation, architectural review, compliance assessment, or comprehensive security evaluation
-2. **Target Identification**: Define the MCP server(s) to be audited
-3. **Scope Definition**: Determine audit depth, focus areas, and constraints based on purpose
-4. **Risk Assessment**: Identify high-risk areas based on server type and usage
-5. **Methodology Selection**: Choose appropriate testing methods and tools
-6. **Baseline Documentation**: Capture initial state and claims about the server
-7. **Audit Plan Report**: Generate comprehensive planning document outlining objectives, scope, and methodology
+#### 2. Practical Security Application
+- **Real-World Examples**: Uses actual MCP servers to illustrate security concepts
+- **Case Study Analysis**: Examines both secure and vulnerable implementations
+- **Scenario-Based Learning**: Presents different security contexts and challenges
+- **Problem-Solving**: Helps you work through actual security assessment challenges
+- **Skill Building**: Develops your ability to evaluate security independently
 
-### Phase 2: Automated Security Scanning
-1. **Static Analysis**: Scan source code for vulnerabilities and quality issues
-2. **Dependency Scanning**: Check for known vulnerabilities in dependencies
-3. **Configuration Analysis**: Evaluate security settings and defaults
-4. **Protocol Compliance**: Validate MCP specification adherence
-5. **Signature Detection**: Check for known vulnerability patterns
-6. **Phase Checkpoint**: Save progress and findings before proceeding to manual testing
+#### 3. Security Knowledge Sharing
+- **Expert Insights**: Provides professional security perspectives and experience
+- **Community Wisdom**: Shares collective knowledge from the security community
+- **Emerging Threats**: Keeps you informed about new attack vectors and risks
+- **Defense Evolution**: Teaches how security practices evolve with threats
+- **Continuous Learning**: Stays current with security developments and research
 
-### Phase 3: Manual Security Testing
-1. **Threat Modeling**: Identify potential attack vectors and scenarios
-2. **Prompt Injection Testing**: Attempt various injection attacks
-3. **Authorization Testing**: Verify access controls and permission enforcement
-4. **Input Validation Testing**: Test boundary conditions and malformed inputs
-5. **Integration Security**: Test security in realistic deployment scenarios
-6. **Phase Checkpoint**: Document manual testing results and evidence
+## Expert Knowledge Areas
 
-### Phase 4: Functional Validation
-1. **Feature Testing**: Verify advertised capabilities work correctly
-2. **Performance Testing**: Assess resource usage and scalability
-3. **Error Condition Testing**: Evaluate handling of edge cases and failures
-4. **Client Compatibility**: Test with multiple MCP client implementations
-5. **Documentation Verification**: Validate accuracy of documentation and examples
-6. **Phase Checkpoint**: Consolidate functional validation findings
+### MCP-Specific Security Threats
+- **Prompt Injection**: Understanding direct and indirect prompt manipulation attacks
+- **Confused Deputy**: Recognizing authorization bypass and privilege escalation risks
+- **Token Theft**: Evaluating OAuth token security and credential protection
+- **Data Exfiltration**: Assessing risks of unauthorized data access and leakage
+- **Protocol Violations**: Identifying deviations from MCP security specifications
+- **Cross-Origin Issues**: Understanding cross-domain and cross-service security risks
 
-### Phase 5: Analysis and Reporting
+### Security Assessment Methodologies
+- **Threat Modeling**: Systematic identification and analysis of security threats
+- **Risk Analysis**: Quantitative and qualitative approaches to risk assessment
+- **Vulnerability Assessment**: Techniques for identifying security weaknesses
+- **Code Security Review**: Methods for evaluating code security
+- **Configuration Security**: Assessing security-relevant configuration options
+- **Dependency Security**: Evaluating third-party library and dependency risks
+
+### Security Tool Ecosystem
+- **Static Analysis Tools**: Understanding and using code analysis tools
+- **Dynamic Testing**: Approaches for runtime security testing
+- **Vulnerability Scanners**: Leveraging automated vulnerability detection
+- **Security Frameworks**: Using established security assessment frameworks
+- **Monitoring Solutions**: Implementing security monitoring and alerting
+- **Incident Response**: Handling security incidents and breaches
+
+## Practical Workflow
+
+### Phase 1: Security Education and Threat Modeling
+1. **Security Awareness Building**: Introduce MCP-specific security concepts and risks
+2. **Threat Model Development**: Guide you through identifying relevant threats
+3. **Risk Assessment Framework**: Teach systematic approaches to risk evaluation
+4. **Attack Vector Analysis**: Explore how attacks might target the specific server
+5. **Security Objectives**: Define what security means for your use case
+
+### Phase 2: Guided Security Analysis
+1. **Analysis Planning**: Develop a systematic approach to security evaluation
+2. **Basic Security Scanning**: Perform fundamental security checks
+3. **Code Review Guidance**: Help you understand what to look for in code
+4. **Configuration Assessment**: Evaluate security-relevant settings and options
+5. **Dependency Review**: Check for known vulnerabilities in dependencies
+
+### Phase 3: Risk Evaluation and Prioritization
 1. **Finding Classification**: Categorize and prioritize discovered issues
-2. **Risk Assessment**: Calculate quantitative risk scores and impact analysis
-3. **Compliance Mapping**: Map findings to relevant security standards
-4. **Remediation Planning**: Develop actionable recommendations with timelines
-5. **Report Generation**: Create comprehensive audit reports for various audiences
-6. **Final Checkpoint**: Complete audit documentation and evidence package
+2. **Risk Assessment**: Evaluate the real-world impact and likelihood of threats
+3. **Vulnerability Analysis**: Deep dive into identified security weaknesses
+4. **Exploitability Assessment**: Determine how easily issues could be exploited
+5. **Business Impact**: Understand how security issues affect your specific use case
 
-## Audit Types and Purposes
+### Phase 4: Remediation Guidance and Next Steps
+1. **Mitigation Strategy**: Develop approaches to address identified risks
+2. **Remediation Planning**: Prioritize and plan security improvements
+3. **Compensating Controls**: Identify alternative security measures when needed
+4. **Monitoring Recommendations**: What to watch for in ongoing operations
+5. **Learning Reinforcement**: Summarize key security lessons and skills developed
 
-### Audit Purpose Categories
-- **Technical Validation**: Verify functionality, performance, and technical implementation quality
-- **Architectural Review**: Assess design patterns, scalability, and integration considerations
-- **Security Assessment**: Comprehensive security evaluation including vulnerability scanning and threat analysis
-- **Compliance Audit**: Evaluate adherence to security standards, regulations, and best practices
-- **Production Readiness**: Holistic evaluation for deployment decision-making
-- **Risk Assessment**: Quantitative and qualitative risk analysis for business decision support
-- **Maintenance Review**: Ongoing evaluation of deployed servers for continued security and functionality
+## Basic Functional Capabilities
 
-### Tailored Audit Approaches
-Each audit type receives customized methodology, depth of analysis, and reporting format appropriate to its specific objectives and intended audience.
+### Security Analysis Functions
+- **Static Code Analysis**: Basic scanning for common security patterns and anti-patterns
+- **Dependency Scanning**: Checking for known vulnerabilities in third-party libraries
+- **Configuration Review**: Assessment of security-relevant configuration options
+- **Protocol Compliance**: Verification of MCP security specification adherence
+- **Permission Analysis**: Evaluation of access controls and privilege models
 
-## Audit Scope and Coverage
+### Educational Functions
+- **Interactive Threat Modeling**: Guided sessions for identifying and analyzing threats
+- **Risk Assessment Tools**: Frameworks for evaluating and communicating security risks
+- **Vulnerability Explanation**: Detailed explanations of security issues and their implications
+- **Mitigation Guidance**: Practical advice on addressing identified security concerns
+- **Security Skill Assessment**: Evaluation of user security knowledge and gaps
 
-### Security Dimensions
-- **Code Security**: Vulnerability scanning, secure coding practices, code quality
-- **Protocol Security**: MCP specification compliance, security feature implementation
-- **Operational Security**: Configuration, deployment, monitoring, and maintenance
-- **Data Security**: Data handling, storage, transmission, and access controls
-- **Authentication Security**: Identity verification, token management, session handling
-- **Authorization Security**: Permission models, access controls, privilege escalation
-
-### Threat Categories
-- **Prompt Injection**: Direct and indirect prompt manipulation attacks
-- **Confused Deputy**: Authorization bypass and privilege escalation
-- **Token Theft**: OAuth token compromise and misuse
-- **Data Exfiltration**: Unauthorized data access and leakage
-- **Supply Chain**: Dependency vulnerabilities and distribution risks
-- **Configuration**: Insecure defaults and misconfigurations
-
-### Compliance Frameworks
-- **MCP Security Best Practices**: Official security guidelines and recommendations
-- **OWASP Guidelines**: Web application and API security standards
-- **Industry Standards**: Relevant security frameworks (ISO 27001, NIST, etc.)
-- **Regulatory Requirements**: Compliance with applicable data protection laws
-
-## Audit Artifacts and Outputs
-
-### Report Types
-- **Executive Summary**: High-level findings and recommendations for leadership
-- **Technical Report**: Detailed findings with proof-of-concept and remediation steps
-- **Compliance Report**: Mapping to security standards and regulatory requirements
-- **Risk Assessment**: Quantitative risk analysis and business impact evaluation
-- **Remediation Guide**: Prioritized action items with implementation guidance
-
-### Evidence Documentation
-- **Vulnerability Proof**: Screenshots, logs, and reproduction steps
-- **Code Analysis**: Annotated source code with security findings
-- **Test Results**: Automated scan results and manual testing evidence
-- **Configuration Review**: Security setting analysis and recommendations
-- **Compliance Matrix**: Detailed mapping to security standards
+### Orchestration Functions
+- **Security Tool Integration**: Recommendations for specialized security analysis tools
+- **Expert Consultation**: Guidance on when to involve security professionals
+- **Resource Recommendations**: Pointing to relevant security documentation and resources
+- **Community Intelligence**: Access to collective security knowledge and experience
+- **Incident Response Planning**: Guidance on handling security issues and breaches
 
 ## Integration with Ecosystem
 
-### Input Sources
-- **mcpserver-finder**: Import discovery reports and candidate servers for audit
-- **Community Reports**: Leverage existing vulnerability reports and security research
-- **User Requests**: Direct audit requests for specific servers or concerns
-- **Automated Triggers**: Scheduled audits and continuous monitoring
+### Learning from Other Experts
+- **mcpserver-finder**: Understand discovery patterns that indicate security concerns
+- **mcpserver-builder**: Learn about secure development practices and patterns
+- **mcpserver-operator**: Understand operational security requirements and deployment risks
+- **vulnerability-db**: Access to known vulnerabilities and security intelligence
+- **audit-db**: Learn from community security assessments and findings
 
-### Output Destinations
-- **vulnerability-db**: Contribute verified findings to the community vulnerability database
-- **audit-db**: Store comprehensive audit results for historical reference
-- **mcpserver-builder**: Provide security requirements and fixes for development tool
-- **User Reports**: Deliver actionable security assessments to requesting users
+### Teaching Preparation for Next Steps
+- **Development Guidance**: Prepare users for secure MCP server development
+- **Operational Security**: Set up users for secure deployment and operations
+- **Incident Response**: Ensure users understand how to handle security issues
+- **Continuous Monitoring**: Teach ongoing security assessment and maintenance
 
-## Context Resilience
+## Expert Development and Learning
 
-When handling large audit sessions that may exceed context limits, the tool:
-1. **Periodic Checkpointing**: Saves progress and findings at the end of each audit phase
-2. **Incremental Progress**: Maintains detailed audit logs and evidence chains throughout the process
-3. **Resumable Testing**: Supports continuation of testing across multiple sessions
-4. **State Preservation**: Preserves all findings, evidence, and audit context for report generation
-5. **Methodology Continuity**: Ensures consistent approach when resuming interrupted audits
-6. **Progress Tracking**: Maintains clear visibility into completed vs. remaining audit activities
+### Continuous Security Knowledge Updates
+- **Threat Intelligence**: Stay current with emerging threats and attack vectors
+- **Vulnerability Research**: Monitor new vulnerabilities and security research
+- **Tool Evolution**: Learn about new security analysis tools and techniques
+- **Community Engagement**: Incorporate insights from security researchers and practitioners
+- **Best Practice Evolution**: Adapt guidance based on evolving security landscape
 
-## Quality Assurance
+### Teaching Methodology Improvement
+- **Learning Assessment**: Evaluate how well users develop security thinking skills
+- **Approach Refinement**: Improve security education methods based on user success
+- **Curriculum Development**: Enhance security education content and progression
+- **Feedback Integration**: Incorporate user feedback into teaching approaches
+- **Skill Development**: Better understanding of security knowledge gaps and needs
 
-### Audit Methodology
-- **External Review**: Critical findings undergo independent verification through automated validation
-- **False Positive Reduction**: Multiple validation techniques to ensure accuracy
-- **Reproducibility**: All findings include detailed reproduction steps
-- **Continuous Improvement**: Methodology refinement based on feedback and new threats
-- **Tool Validation**: Regular verification of scanning tools and techniques
+## Security Assessment Types
 
-### Reporting Standards
-- **Consistent Format**: Standardized report structure across all audits
-- **Clear Severity Levels**: Well-defined risk classification system
-- **Actionable Recommendations**: Specific, implementable remediation guidance
-- **Evidence Standards**: Rigorous documentation of all findings
-- **Review Process**: Quality control for all audit reports
+### Assessment Purposes
+- **Security Validation**: Verify that servers meet security requirements
+- **Risk Assessment**: Evaluate security risks for deployment decisions
+- **Vulnerability Discovery**: Identify potential security weaknesses
+- **Compliance Evaluation**: Assess adherence to security standards and best practices
+- **Incident Investigation**: Analyze security incidents and breaches
 
-## Usage
+### Assessment Approaches
+Each assessment type receives tailored security education, appropriate analysis depth, and specific guidance based on the security objectives and risk context.
+
+## Usage and Access
 
 This MCP server is designed to be used with MCP-compatible clients and requires:
-- **File System Access**: For report generation and evidence storage
-- **Network Access**: For dependency scanning and external vulnerability databases
-- **Code Analysis Tools**: Integration with static analysis and security scanning tools
-- **Test Environment**: Ability to safely test MCP servers in isolated environments
+- **Interactive Capabilities**: For conversational security guidance and tutoring
+- **Basic Code Access**: For performing security analysis and review
+- **Vulnerability Intelligence**: For accessing known vulnerability information
+- **Security Tool Integration**: For orchestrating with specialized security analysis tools
 
 ## Contributing
 
-This tool is part of the broader Model Context Protocol Security initiative. Contributions are welcome, particularly:
-- New vulnerability detection techniques
-- Additional compliance framework mappings
-- Enhanced automation and tooling integration
-- Improved reporting and visualization capabilities
+This tool is part of the broader Model Context Protocol Security initiative. We welcome contributions that enhance the security expertise and teaching capabilities:
+- **Security Expertise**: Insights about MCP-specific threats and vulnerabilities
+- **Teaching Methods**: Improved approaches for educating users about security
+- **Analysis Techniques**: Better methods for evaluating MCP server security
+- **Threat Intelligence**: Information about emerging threats and attack vectors
+- **Security Best Practices**: Proven approaches for secure MCP server development and deployment
 
 ---
 
 *Part of the [Model Context Protocol Security](https://modelcontextprotocol-security.io/) initiative - A Cloud Security Alliance community project.*
+
