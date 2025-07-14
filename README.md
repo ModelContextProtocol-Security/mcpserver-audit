@@ -6,7 +6,7 @@
 
 MCP Server Audit is a comprehensive security and functionality assessment tool designed to evaluate Model Context Protocol servers for production readiness. Whether you're vetting a server discovered through mcpserver-finder, conducting due diligence before deployment, or performing ongoing security assessments, this tool provides thorough analysis across multiple security dimensions.
 
-The tool goes beyond basic security scanning to provide holistic evaluation including code quality, protocol compliance, operational security, and deployment safety. It generates detailed audit reports that serve as evidence for security compliance, risk assessment, and operational decision-making.
+The tool goes beyond basic security scanning to provide holistic evaluation including code quality, protocol compliance, operational security, and deployment safety. It begins by establishing clear audit objectives and scope based on the user's specific needs—whether technical validation, architectural review, compliance assessment, or comprehensive security evaluation. The tool generates detailed audit reports that serve as evidence for security compliance, risk assessment, and operational decision-making.
 
 ## Key Features
 
@@ -21,12 +21,13 @@ The tool goes beyond basic security scanning to provide holistic evaluation incl
 
 ### Primary Goals
 
-1. **Ensure MCP Server Security**: Identify and document security vulnerabilities before deployment
-2. **Validate Functionality Claims**: Verify that servers actually deliver promised capabilities
-3. **Assess Production Readiness**: Evaluate overall quality and reliability for production use
-4. **Generate Compliance Evidence**: Create audit reports suitable for security and compliance requirements
-5. **Support Risk-Based Decisions**: Provide quantitative and qualitative risk assessments
-6. **Feed Vulnerability Intelligence**: Contribute findings to community vulnerability databases
+1. **Define Clear Audit Objectives**: Establish specific audit purpose, scope, and success criteria based on user needs
+2. **Ensure MCP Server Security**: Identify and document security vulnerabilities before deployment
+3. **Validate Functionality Claims**: Verify that servers actually deliver promised capabilities
+4. **Assess Production Readiness**: Evaluate overall quality and reliability for production use
+5. **Generate Compliance Evidence**: Create audit reports suitable for security and compliance requirements
+6. **Support Risk-Based Decisions**: Provide quantitative and qualitative risk assessments
+7. **Feed Vulnerability Intelligence**: Contribute findings to community vulnerability databases
 
 ### Core Strategies
 
@@ -65,11 +66,13 @@ The tool goes beyond basic security scanning to provide holistic evaluation incl
 ## High-Level Workflow
 
 ### Phase 1: Audit Planning and Scoping
-1. **Target Identification**: Define the MCP server(s) to be audited
-2. **Scope Definition**: Determine audit depth, focus areas, and constraints
-3. **Risk Assessment**: Identify high-risk areas based on server type and usage
-4. **Methodology Selection**: Choose appropriate testing methods and tools
-5. **Baseline Documentation**: Capture initial state and claims about the server
+1. **Purpose Definition**: Establish audit objectives - technical validation, architectural review, compliance assessment, or comprehensive security evaluation
+2. **Target Identification**: Define the MCP server(s) to be audited
+3. **Scope Definition**: Determine audit depth, focus areas, and constraints based on purpose
+4. **Risk Assessment**: Identify high-risk areas based on server type and usage
+5. **Methodology Selection**: Choose appropriate testing methods and tools
+6. **Baseline Documentation**: Capture initial state and claims about the server
+7. **Audit Plan Report**: Generate comprehensive planning document outlining objectives, scope, and methodology
 
 ### Phase 2: Automated Security Scanning
 1. **Static Analysis**: Scan source code for vulnerabilities and quality issues
@@ -77,6 +80,7 @@ The tool goes beyond basic security scanning to provide holistic evaluation incl
 3. **Configuration Analysis**: Evaluate security settings and defaults
 4. **Protocol Compliance**: Validate MCP specification adherence
 5. **Signature Detection**: Check for known vulnerability patterns
+6. **Phase Checkpoint**: Save progress and findings before proceeding to manual testing
 
 ### Phase 3: Manual Security Testing
 1. **Threat Modeling**: Identify potential attack vectors and scenarios
@@ -84,6 +88,7 @@ The tool goes beyond basic security scanning to provide holistic evaluation incl
 3. **Authorization Testing**: Verify access controls and permission enforcement
 4. **Input Validation Testing**: Test boundary conditions and malformed inputs
 5. **Integration Security**: Test security in realistic deployment scenarios
+6. **Phase Checkpoint**: Document manual testing results and evidence
 
 ### Phase 4: Functional Validation
 1. **Feature Testing**: Verify advertised capabilities work correctly
@@ -91,6 +96,7 @@ The tool goes beyond basic security scanning to provide holistic evaluation incl
 3. **Error Condition Testing**: Evaluate handling of edge cases and failures
 4. **Client Compatibility**: Test with multiple MCP client implementations
 5. **Documentation Verification**: Validate accuracy of documentation and examples
+6. **Phase Checkpoint**: Consolidate functional validation findings
 
 ### Phase 5: Analysis and Reporting
 1. **Finding Classification**: Categorize and prioritize discovered issues
@@ -98,6 +104,21 @@ The tool goes beyond basic security scanning to provide holistic evaluation incl
 3. **Compliance Mapping**: Map findings to relevant security standards
 4. **Remediation Planning**: Develop actionable recommendations with timelines
 5. **Report Generation**: Create comprehensive audit reports for various audiences
+6. **Final Checkpoint**: Complete audit documentation and evidence package
+
+## Audit Types and Purposes
+
+### Audit Purpose Categories
+- **Technical Validation**: Verify functionality, performance, and technical implementation quality
+- **Architectural Review**: Assess design patterns, scalability, and integration considerations
+- **Security Assessment**: Comprehensive security evaluation including vulnerability scanning and threat analysis
+- **Compliance Audit**: Evaluate adherence to security standards, regulations, and best practices
+- **Production Readiness**: Holistic evaluation for deployment decision-making
+- **Risk Assessment**: Quantitative and qualitative risk analysis for business decision support
+- **Maintenance Review**: Ongoing evaluation of deployed servers for continued security and functionality
+
+### Tailored Audit Approaches
+Each audit type receives customized methodology, depth of analysis, and reporting format appropriate to its specific objectives and intended audience.
 
 ## Audit Scope and Coverage
 
@@ -155,17 +176,18 @@ The tool goes beyond basic security scanning to provide holistic evaluation incl
 
 ## Context Resilience
 
-When handling large audit sessions, the tool:
-1. Saves progress incrementally as each audit phase completes
-2. Maintains detailed audit logs and evidence chains
-3. Supports resumable testing that can continue across sessions
-4. Preserves all findings and evidence for report generation
-5. Enables iterative refinement of audit scope and methodology
+When handling large audit sessions that may exceed context limits, the tool:
+1. **Periodic Checkpointing**: Saves progress and findings at the end of each audit phase
+2. **Incremental Progress**: Maintains detailed audit logs and evidence chains throughout the process
+3. **Resumable Testing**: Supports continuation of testing across multiple sessions
+4. **State Preservation**: Preserves all findings, evidence, and audit context for report generation
+5. **Methodology Continuity**: Ensures consistent approach when resuming interrupted audits
+6. **Progress Tracking**: Maintains clear visibility into completed vs. remaining audit activities
 
 ## Quality Assurance
 
 ### Audit Methodology
-- **Peer Review**: Critical findings undergo independent verification
+- **External Review**: Critical findings undergo independent verification through automated validation
 - **False Positive Reduction**: Multiple validation techniques to ensure accuracy
 - **Reproducibility**: All findings include detailed reproduction steps
 - **Continuous Improvement**: Methodology refinement based on feedback and new threats
