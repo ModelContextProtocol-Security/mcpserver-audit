@@ -1,6 +1,6 @@
 # MCP Server Audit
 
-**Security assessment tool for MCP servers and Claude Desktop Extensions - because anyone can build them, but not everyone builds them safely.**
+**Code audit tool that finds security vulnerabilities in MCP servers and Claude Desktop Extensions - because anyone can build them, but not everyone builds them safely.**
 
 ## Why This Tool Exists
 
@@ -52,17 +52,27 @@ Since anyone can create these tools by asking AI assistants, we're seeing an exp
 - **Poor quality** - Many tools break, perform poorly, or aren't maintained
 - **Unknown trustworthiness** - Hard to tell which tools are safe to use
 
-## The Solution: Security-First Assessment
+## The Solution: Code Security Audit
 
-MCP Server Audit is your expert security advisor for evaluating Model Context Protocol servers. Rather than just being an automated scanner, it serves as a knowledgeable security tutor who teaches you how to think about MCP-specific threats, understand risk assessment, and develop the skills to evaluate server security independently.
+MCP Server Audit **audits MCP server source code to find security vulnerabilities**. Rather than just being an automated scanner, it serves as a knowledgeable security tutor who teaches you how to identify code vulnerabilities, understand AIVSS scoring, and develop the skills to audit server code independently.
 
-This tool helps you **evaluate MCP servers and extensions** before using them, whether they're:
+This tool helps you **audit MCP server code** to find vulnerabilities in servers that are:
 - Built by AI assistants (like the example above)
 - Downloaded from the community
 - Created by professional developers
 - Something you built yourself
 
-The server combines security education with practical analysis capabilities, helping you understand not just whether a server has security issues, but how to evaluate security risks systematically. It teaches you the security mindset, walks you through threat modeling, and helps you develop the expertise to make informed security decisions.
+The tool combines vulnerability detection with security education, helping you understand not just whether code has security issues, but how to identify and score vulnerabilities systematically using AIVSS (Agentic AI Vulnerability Scoring System).
+
+## MCP Security Ecosystem Integration
+
+MCP Server Audit is part of a complete security toolkit:
+
+- **mcpserver-audit** (this tool): **Finds security vulnerabilities** in existing code
+- **mcpserver-builder**: **Fixes vulnerabilities and builds secure code** from scratch or updates existing code
+- **mcpserver-operator**: **Deploys and operates servers securely**, provides runtime security controls and workarounds
+
+**Complete workflow**: Audit finds problems → Builder fixes them in code → Operator handles secure deployment
 
 ## Expert-Guided Approach
 
@@ -72,31 +82,30 @@ This MCP server is designed as an **expert advisor and tutor** in its domain, wi
 
 ### What This Tool Does
 
-- **Spot dangerous servers** - Identify red flags that indicate security risks or poor quality
-- **Teach evaluation skills** - Learn what to look for and why it matters
-- **Guide safe creation** - Help you build secure tools when using AI assistance
-- **Assess trustworthiness** - Evaluate whether community extensions are safe to use
+- **Audits source code** - Scans MCP server code for security vulnerabilities  
+- **Scores vulnerabilities** - Uses AIVSS to rate severity of security issues found
+- **Identifies dangerous patterns** - Spots code that creates security risks
+- **Teaches vulnerability recognition** - Learn what security issues look like in code
+- **Limited fix guidance** - Basic recommendations (detailed fixes handled by mcpserver-builder)
+
+### Code Vulnerability Analysis
+- **Source Code Scanning**: Automated detection of security vulnerabilities in code
+- **Dependency Analysis**: Checks for known vulnerabilities in third-party libraries
+- **Configuration Review**: Identifies insecure configuration patterns
+- **AIVSS Scoring**: Rates vulnerabilities using both traditional CVSS and agentic AI risk factors
+- **CWE Mapping**: Links findings to Common Weakness Enumeration categories
 
 ### Security Education
-- **Threat Model Teaching**: Explains MCP-specific security risks and attack vectors
-- **Risk Assessment Training**: Teaches systematic approaches to evaluating security risks
-- **Vulnerability Recognition**: Helps you identify common security weaknesses and patterns
-- **Security Mindset Development**: Builds your ability to think like an attacker and defender
-- **Best Practices Instruction**: Shares proven security evaluation methodologies
+- **Vulnerability Recognition**: Teaches you to identify security issues in MCP server code
+- **Code Security Patterns**: Shows secure vs. insecure coding patterns
+- **AIVSS Understanding**: Explains how to score agentic AI security risks
+- **Audit Methodology**: Builds skills for systematic code security review
 
-### Practical Analysis
-- **Basic Security Scanning**: Performs fundamental security checks and analysis
-- **Code Review Guidance**: Helps you understand what to look for in security reviews
-- **Configuration Assessment**: Evaluates security-relevant configuration options
-- **Dependency Analysis**: Checks for known vulnerabilities in dependencies
-- **Protocol Compliance**: Verifies adherence to MCP security specifications
-
-### Expert Orchestration
-- **Security Tool Recommendations**: Suggests specialized security analysis tools when needed
-- **Expert Referrals**: Connects you with security professionals for complex issues
-- **Methodology Sharing**: Teaches advanced security evaluation techniques
-- **Resource Guidance**: Points you to security resources and documentation
-- **Incident Response**: Provides guidance on handling discovered security issues
+### Ecosystem Integration
+- **Vulnerability Database**: Contributes findings to audit-db and vulnerability-db for community benefit
+- **mcpserver-builder Integration**: Hands off vulnerabilities for detailed fix recommendations
+- **mcpserver-operator Integration**: Coordinates with deployment security guidance
+- **Community Intelligence**: Shares vulnerability patterns to help everyone stay safer
 
 ## Who Needs This Tool
 
@@ -248,59 +257,60 @@ This MCP server is designed as an **expert advisor and tutor** in its domain, wi
 
 ### Quick Walkthrough
 
-**1. Choose Your Security Approach:**
+**1. Choose Your Code Audit Approach:**
 
-- **Comprehensive Security Assessment**: Start with `read prompts/security-assessment.md` for complete threat modeling and vulnerability analysis
-- **Targeted Security Evaluation**: Use `read prompts/targeted-evaluation.md` if you already have a specific server to assess  
-- **General Security Guidance**: Use `read prompts/main-prompt.md` for overall MCP server security guidance
+- **Comprehensive Code Audit**: Start with `read prompts/security-assessment.md` for complete vulnerability scanning and code analysis
+- **Targeted Code Review**: Use `read prompts/targeted-evaluation.md` if you already have a specific server to audit  
+- **General Audit Guidance**: Use `read prompts/main-prompt.md` for overall MCP server code audit guidance
 
-**2. Apply Security Checks:**
+**2. Apply Code Security Checks:**
 
-- Browse `checks/` directory for available vulnerability assessments
-- Each check includes AIVSS scoring, CWE mappings, and detection methods
-- Current checks: credential management security, network port binding security
-- Use AIVSS scores (Critical/High/Medium/Low) to prioritize security risks
+- Browse `checks/` directory for available vulnerability detection checks
+- Each check includes AIVSS scoring, CWE mappings, and code scanning methods
+- Current checks: credential management vulnerabilities, network security issues
+- Use AIVSS scores (Critical/High/Medium/Low) to prioritize vulnerability fixes
 
-**3. Reference Security Resources:**
+**3. Reference Audit Resources:**
 
-- `research/` contains threat modeling templates and security frameworks
-- `resources/` has security checklists and risk assessment frameworks  
-- Many security areas exist but don't have dedicated check files yet - great contributor opportunity!
+- `research/` contains vulnerability analysis templates and audit frameworks
+- `resources/` has code security checklists and vulnerability assessment frameworks  
+- Many vulnerability types exist but don't have dedicated check files yet - great contributor opportunity!
 
-**4. Leverage Security Tools:**
+**4. Leverage Code Analysis Tools:**
 
-- Vulnerability scanning and code analysis capabilities are built into Claude Desktop and other MCP clients
-- AIVSS and CVSS reference materials provided for accurate scoring
-- This system provides the security methodology; your AI assistant provides the execution power
+- Code vulnerability scanning and analysis capabilities are built into Claude Desktop and other MCP clients
+- AIVSS and CVSS reference materials provided for accurate vulnerability scoring
+- This system provides the audit methodology; your AI assistant provides the code analysis power
 
-**5. Contribute Back:**
+**5. Contribute and Hand Off:**
 
 - Submit vulnerability findings to `audit-db` and `vulnerability-db` for community benefit
-- Share security assessment results to help everyone stay safer
-- Help us learn from your discoveries and improve the security assessment framework
+- **Hand off to mcpserver-builder** for detailed vulnerability fixes and secure coding guidance
+- **Coordinate with mcpserver-operator** for secure deployment and runtime security controls
+- Help us learn from your discoveries and improve the vulnerability detection framework
 
 ### Quick Start Examples
 
-**Comprehensive Security Assessment** (full threat analysis):
+**Comprehensive Code Audit** (full vulnerability scan):
 ```
-read prompts/security-assessment.md and conduct a security assessment of MCP server [SERVER_NAME]
-```
-
-**Targeted Security Evaluation** (focused assessment):
-```
-read prompts/targeted-evaluation.md and conduct a security evaluation of MCP server [SERVER_NAME]
+read prompts/security-assessment.md and conduct a security audit of MCP server [SERVER_NAME]
 ```
 
-**Apply Security Check** (assess specific vulnerability):
+**Targeted Code Review** (focused vulnerability assessment):
 ```
-read checks/credential-management-security.md and assess credential security of [SERVER_NAME]
+read prompts/targeted-evaluation.md and audit the security of MCP server [SERVER_NAME]
+```
+
+**Apply Vulnerability Check** (scan for specific vulnerability type):
+```
+read checks/credential-management-security.md and check for credential vulnerabilities in [SERVER_NAME]
 ```
 
 ### System Requirements
 
 - **Claude Desktop** or other MCP-compatible AI client
-- **File system access** to read the security checks and assessment guides
-- **Internet access** for vulnerability research and dependency analysis (optional but helpful)
+- **File system access** to read MCP server source code and vulnerability checks
+- **Internet access** for vulnerability database lookups and dependency analysis (optional but helpful)
 
 ## Learn More
 
@@ -357,18 +367,18 @@ We're building comprehensive mappings between vulnerabilities and security frame
 
 This creates a **comprehensive security intelligence system** that doesn't just find problems, but explains their business impact, regulatory implications, and exactly which security controls need to be implemented to address them.
 
-### Learning from Other Experts
-- **mcpserver-finder**: Understand discovery patterns that indicate security concerns
-- **mcpserver-builder**: Learn about secure development practices and patterns
-- **mcpserver-operator**: Understand operational security requirements and deployment risks
-- **vulnerability-db**: Access to known vulnerabilities and security intelligence
-- **audit-db**: Learn from community security assessments and findings
+### Ecosystem Integration and Handoffs
+- **mcpserver-finder**: Integrate with discovery patterns that indicate security concerns
+- **mcpserver-builder**: Hand off vulnerabilities for detailed fix guidance and secure development
+- **mcpserver-operator**: Coordinate on operational security requirements and deployment risks
+- **vulnerability-db**: Contribute to and access known vulnerabilities and security intelligence
+- **audit-db**: Share and learn from community vulnerability assessments and findings
 
-### Teaching Preparation for Next Steps
-- **Development Guidance**: Prepare users for secure MCP server development
-- **Operational Security**: Set up users for secure deployment and operations
-- **Incident Response**: Ensure users understand how to handle security issues
-- **Continuous Monitoring**: Teach ongoing security assessment and maintenance
+### Code Audit Preparation for Next Steps
+- **Vulnerability Fix Planning**: Prepare detailed findings for mcpserver-builder remediation
+- **Deployment Security**: Document runtime security controls needed for mcpserver-operator  
+- **Incident Response**: Ensure users understand how to handle discovered vulnerabilities
+- **Continuous Monitoring**: Teach ongoing code audit and vulnerability monitoring practices
 
 ## Expert Development and Learning
 
