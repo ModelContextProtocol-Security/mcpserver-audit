@@ -175,6 +175,24 @@ cwe-primary: [XXX]  # Primary CWE this check addresses
 - [When people under-value reliable vulnerability findings]
 - [How to calibrate security confidence appropriately between CVSS and AARS factors]
 
+## Basic Remediation Guidance
+
+### Critical Issues Found
+- **[Specific vulnerability type]**: [Brief description of immediate security risk]
+- **[Another vulnerability type]**: [Brief description of security issue]
+
+### Next Steps for Fixing
+**For detailed remediation guidance**: Use mcpserver-builder for step-by-step secure coding fixes
+**For secure deployment**: Coordinate with mcpserver-operator for runtime security controls
+**Immediate priority**: Focus on the highest AIVSS-scored vulnerabilities first
+
+## Integration with MCP Security Ecosystem
+
+- **Cross-reference with `vulnerability-db`** for known vulnerability patterns
+- **Document findings in `audit-db`** for community benefit
+- **Update `server-db`** with security assessment results
+- **Flag for enhanced monitoring** if security practices are concerning
+
 ## AIVSS & CVSS Reference Materials
 
 For AI assistants conducting security assessments, these markdown versions of the standards are optimized for AI processing:
@@ -183,6 +201,8 @@ For AI assistants conducting security assessments, these markdown versions of th
 - **CVSS v4.0 (Common Vulnerability Scoring System)**: https://github.com/CloudSecurityAlliance-DataSets/dataset-public-laws-regulations-standards/tree/main/tools-resources/first.org/CVSS
 
 ---
+
+*This check is part of the MCP Server Audit security assessment framework. Last updated: [YYYY-MM-DD]*
 
 **Template Usage Notes:**
 - Replace all [bracketed items] with specific security content

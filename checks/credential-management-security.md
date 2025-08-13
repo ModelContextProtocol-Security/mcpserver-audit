@@ -207,21 +207,17 @@ if not validate_token_scopes(token, required_scopes):
 - **Update `server-db`** with credential management assessment results
 - **Flag for enhanced monitoring** if credential practices are concerning
 
-## Remediation Guidance
+## Basic Remediation Guidance
 
-### Immediate Actions for Hardcoded Secrets
+### Critical Issues Found
+- **Hardcoded secrets**: Immediate security risk requiring urgent action
+- **Committed credentials**: Permanent exposure in version control history  
+- **Poor credential practices**: Ongoing security vulnerability
 
-1. **Remove from git history**: Use `git filter-branch` or BFG Repo-Cleaner
-2. **Rotate all exposed credentials**: Assume they are compromised
-3. **Add to .gitignore**: Prevent future commits of credential files
-4. **Implement pre-commit hooks**: Scan for secrets before commits
-
-### Migration to Secure Practices
-
-1. **Environment variable conversion**: Move hardcoded values to env vars
-2. **Documentation updates**: Document all required environment variables
-3. **Example configuration**: Provide templates with placeholder values
-4. **Testing**: Verify server works with environment-based credentials
+### Next Steps for Fixing
+**For detailed remediation guidance**: Use mcpserver-builder for step-by-step secure coding fixes
+**For secure deployment**: Coordinate with mcpserver-operator for runtime credential management
+**Immediate priority**: Focus on the highest AIVSS-scored credential vulnerabilities first
 
 ## Teaching Points
 
