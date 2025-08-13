@@ -244,28 +244,63 @@ This MCP server is designed as an **expert advisor and tutor** in its domain, wi
 - **Community Intelligence**: Access to collective security knowledge and experience
 - **Incident Response Planning**: Guidance on handling security issues and breaches
 
-## How to Use This Guide
+## How to Use This System
 
-### Quick Start Example
+### Quick Walkthrough
 
-**Security Assessment** (check if a tool is safe):
+**1. Choose Your Security Approach:**
+
+- **Comprehensive Security Assessment**: Start with `read prompts/security-assessment.md` for complete threat modeling and vulnerability analysis
+- **Targeted Security Evaluation**: Use `read prompts/targeted-evaluation.md` if you already have a specific server to assess  
+- **General Security Guidance**: Use `read prompts/main-prompt.md` for overall MCP server security guidance
+
+**2. Apply Security Checks:**
+
+- Browse `checks/` directory for available vulnerability assessments
+- Each check includes AIVSS scoring, CWE mappings, and detection methods
+- Current checks: credential management security, network port binding security
+- Use AIVSS scores (Critical/High/Medium/Low) to prioritize security risks
+
+**3. Reference Security Resources:**
+
+- `research/` contains threat modeling templates and security frameworks
+- `resources/` has security checklists and risk assessment frameworks  
+- Many security areas exist but don't have dedicated check files yet - great contributor opportunity!
+
+**4. Leverage Security Tools:**
+
+- Vulnerability scanning and code analysis capabilities are built into Claude Desktop and other MCP clients
+- AIVSS and CVSS reference materials provided for accurate scoring
+- This system provides the security methodology; your AI assistant provides the execution power
+
+**5. Contribute Back:**
+
+- Submit vulnerability findings to `audit-db` and `vulnerability-db` for community benefit
+- Share security assessment results to help everyone stay safer
+- Help us learn from your discoveries and improve the security assessment framework
+
+### Quick Start Examples
+
+**Comprehensive Security Assessment** (full threat analysis):
 ```
 read prompts/security-assessment.md and conduct a security assessment of MCP server [SERVER_NAME]
 ```
 
-### For Tool Creators
+**Targeted Security Evaluation** (focused assessment):
+```
+read prompts/targeted-evaluation.md and conduct a security evaluation of MCP server [SERVER_NAME]
+```
 
-**Building MCP Servers**: Use AI assistance with our security guidance to create safe, well-built servers
-
-**Building Desktop Extensions**: Follow the DXT specification with security best practices
-
-**Then use our security assessment tools** to verify your creation is safe and well-built.
+**Apply Security Check** (assess specific vulnerability):
+```
+read checks/credential-management-security.md and assess credential security of [SERVER_NAME]
+```
 
 ### System Requirements
 
 - **Claude Desktop** or other MCP-compatible AI client
-- **File system access** to read the assessment guides and security checks
-- **Internet access** for researching and discovering tools (optional but helpful)
+- **File system access** to read the security checks and assessment guides
+- **Internet access** for vulnerability research and dependency analysis (optional but helpful)
 
 ## Learn More
 
