@@ -121,9 +121,9 @@ if not api_key:
 **❌ INSECURE - Hardcoded Secrets:**
 ```python
 # Never do this
-api_key = "sk-abc123def456789"
+api_key = "sk-00000000000000000000000000000000"
 config = {
-    "token": "xoxb-1234567890-abcdefghijklmnop"
+    "token": "xoxb-00000000000-000000000000000000000000"
 }
 ```
 

@@ -163,10 +163,10 @@ grep -r "0\.0\.0\.0\|bind.*all" --include="*.py" --include="*.js" .
 api_key = os.environ.get('NOTION_API_KEY')
 
 # BAD: Hardcoded in source
-api_key = "sk-abc123def456"  
+api_key = "sk-00000000000000000000000000000000"  
 
 # BAD: Committed in config files
-# config.yaml with api_key: sk-abc123def456
+# config.yaml with api_key: sk-00000000000000000000000000000000
 ```
 
 **Key Questions to Ask**:
