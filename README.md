@@ -368,7 +368,6 @@ We're building comprehensive mappings between vulnerabilities and security frame
 This creates a **comprehensive security intelligence system** that doesn't just find problems, but explains their business impact, regulatory implications, and exactly which security controls need to be implemented to address them.
 
 ### Ecosystem Integration and Handoffs
-- **mcpserver-finder**: Integrate with discovery patterns that indicate security concerns
 - **mcpserver-builder**: Hand off vulnerabilities for detailed fix guidance and secure development
 - **mcpserver-operator**: Coordinate on operational security requirements and deployment risks
 - **vulnerability-db**: Contribute to and access known vulnerabilities and security intelligence
