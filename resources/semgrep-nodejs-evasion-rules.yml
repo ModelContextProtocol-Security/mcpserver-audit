@@ -1,0 +1,92 @@
+rules:
+  # Node.js Specific Evasion Patterns
+  - id: native-module-loading
+    pattern-either:
+      - pattern: |
+          require($MODULE + '.node')
+      - pattern: |
+          dlopen($PATH, ...)
+      - pattern: |
+          process.dlopen($MODULE, $PATH)
+    message: "Native module loading could execute binary payloads"
+    severity: ERROR
+    languages: [javascript, typescript]
+
+  # Process manipulation
+  - id: process-manipulation
+    pattern-either:
+      - pattern: |
+          process.env[$KEY] = $VALUE
+      - pattern: |
+          process.argv.push($ARG)
+      - pattern: |
+          process.chdir($PATH)
+    message: "Process manipulation could alter runtime behavior"
+    severity: WARNING
+    languages: [javascript, typescript]
+
+  # File system operations that could write executables
+  - id: executable-file-operations
+    pattern-either:
+      - pattern: |
+          $FS.writeFile($PATH, $DATA, { mode: 0o755 })
+      - pattern: |
+          $FS.chmod($PATH, 0o755)
+      - pattern: |
+          $FS.writeFileSync($PATH, $DATA)
+    metavariable-regex:
+      metavariable: $PATH
+      regex: '.*\.(exe|dll|so|dylib|bin)$'
+    message: "Writing executable files could install malware"
+    severity: ERROR
+    languages: [javascript, typescript]
+
+  # Inline JavaScript execution without files
+  - id: inline-js-execution
+    pattern-either:
+      - pattern: |
+          child_process.spawn('node', ['-e', $CODE])
+      - pattern: |
+          child_process.exec('node -e "' + $CODE + '"')
+    message: "Inline JavaScript execution bypasses file-based detection"
+    severity: ERROR
+    languages: [javascript, typescript]
+
+  # Buffer operations that could process payloads
+  - id: buffer-payload-processing
+    pattern-either:
+      - pattern: |
+          Buffer.concat([$...BUFFERS])
+      - pattern: |
+          $BUFFER.write($DATA, $OFFSET, $LENGTH, $ENCODING)
+      - pattern: |
+          Buffer.from($DATA, 'hex')
+    message: "Buffer operations could process downloaded payloads"
+    severity: INFO
+    languages: [javascript, typescript]
+
+  # V8 bytecode compilation indicators
+  - id: v8-compilation-indicators
+    pattern-either:
+      - pattern: |
+          v8.serialize($SCRIPT)
+      - pattern: |
+          v8.deserialize($BYTECODE)
+      - pattern: |
+          vm.Script($CODE)
+    message: "V8 compilation features could obfuscate malicious code as bytecode"
+    severity: WARNING
+    languages: [javascript, typescript]
+
+  # Anti-debugging and evasion techniques
+  - id: anti-debugging-patterns
+    pattern-either:
+      - pattern: |
+          process.debugPort
+      - pattern: |
+          process.binding('inspector')
+      - pattern: |
+          typeof v8debug
+    message: "Anti-debugging patterns could indicate evasion techniques"
+    severity: WARNING
+    languages: [javascript, typescript]

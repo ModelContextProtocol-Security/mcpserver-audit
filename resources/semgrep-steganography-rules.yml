@@ -1,0 +1,69 @@
+rules:
+  # Steganographic Content Processing
+  - id: image-pixel-manipulation
+    pattern-either:
+      - pattern: |
+          $CTX.getImageData($...ARGS)
+      - pattern: |
+          $IMG.getPixel($...ARGS)
+      - pattern: |
+          $DATA.data[$INDEX] = $VALUE
+    message: "Image pixel manipulation could extract steganographic payloads"
+    severity: WARNING
+    languages: [javascript, typescript]
+
+  # Binary data processing that could decode hidden content
+  - id: binary-data-manipulation
+    pattern-either:
+      - pattern: |
+          new Uint8Array($DATA)
+      - pattern: |
+          Buffer.from($DATA, $ENCODING)
+      - pattern: |
+          $BUFFER.readUInt8($OFFSET)
+      - pattern: |
+          $BUFFER.slice($START, $END)
+    message: "Binary data manipulation patterns that could process steganographic content"
+    severity: INFO
+    languages: [javascript, typescript]
+
+  # Canvas operations for extracting hidden data
+  - id: canvas-data-extraction
+    pattern-either:
+      - pattern: |
+          $CANVAS.getContext('2d')
+      - pattern: |
+          $CTX.getImageData(0, 0, $WIDTH, $HEIGHT)
+      - pattern: |
+          $IMG.onload = function() { ... }
+    message: "Canvas operations could be used to extract data from images"
+    severity: INFO
+    languages: [javascript, typescript]
+
+  # File processing beyond expected formats
+  - id: unexpected-file-processing
+    pattern-either:
+      - pattern: |
+          $FS.readFile($PATH, 'binary', ...)
+      - pattern: |
+          $FS.readFileSync($PATH, { encoding: 'binary' })
+      - pattern: |
+          $DATA.toString('hex')
+      - pattern: |
+          parseInt($HEX, 16)
+    message: "File processing operations that could handle steganographic content"
+    severity: INFO
+    languages: [javascript, typescript]
+
+  # XOR operations commonly used in steganography
+  - id: xor-operations
+    pattern-either:
+      - pattern: |
+          $A ^ $B
+      - pattern: |
+          $DATA[$I] ^= $KEY
+      - pattern: |
+          for ($I = 0; $I < $LEN; $I++) { $DATA[$I] ^= $KEY[$I % $KEYLEN]; }
+    message: "XOR operations could indicate steganographic decoding"
+    severity: WARNING
+    languages: [javascript, typescript]

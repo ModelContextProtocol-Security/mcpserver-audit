@@ -1,0 +1,53 @@
+rules:
+  # LLM-Generated Code Obfuscation Patterns
+  - id: suspicious-variable-naming
+    pattern-either:
+      - pattern: |
+          $VAR = $X
+      - pattern: |
+          let $VAR = $X
+      - pattern: |
+          const $VAR = $X
+    metavariable-regex:
+      metavariable: $VAR
+      regex: '^[a-zA-Z][a-zA-Z0-9]{20,}$|^[a-z]+[A-Z][a-z]+[A-Z][a-z]+[A-Z].*$'
+    message: "Suspicious variable naming pattern that could indicate LLM obfuscation"
+    severity: WARNING
+    languages: [javascript, typescript]
+
+  # Excessive String Concatenation (obfuscation technique)
+  - id: excessive-string-concatenation
+    pattern: |
+      $STR1 + $STR2 + $STR3 + $STR4 + $...
+    message: "Excessive string concatenation may indicate code obfuscation"
+    severity: INFO
+    languages: [javascript, typescript]
+
+  # Base64/Encoding Operations on Variables
+  - id: dynamic-base64-operations
+    pattern-either:
+      - pattern: |
+          atob($VAR)
+      - pattern: |
+          btoa($VAR)
+      - pattern: |
+          Buffer.from($VAR, 'base64')
+      - pattern: |
+          $VAR.toString('base64')
+    message: "Dynamic Base64 operations could indicate payload decoding"
+    severity: WARNING
+    languages: [javascript, typescript]
+
+  # JSFireTruck-style obfuscation patterns
+  - id: jsfiretruck-obfuscation
+    pattern-regex: "\\[\\]\\s*\\+.*\\$\\{.*\\}"
+    message: "JSFireTruck-style obfuscation pattern detected"
+    severity: ERROR
+    languages: [javascript, typescript]
+
+  # Hex-encoded strings that could be obfuscated code
+  - id: hex-encoded-strings
+    pattern-regex: "\\\\x[0-9a-fA-F]{2}.*\\\\x[0-9a-fA-F]{2}.*\\\\x[0-9a-fA-F]{2}"
+    message: "Long hex-encoded strings may contain obfuscated code"
+    severity: WARNING
+    languages: [javascript, typescript]

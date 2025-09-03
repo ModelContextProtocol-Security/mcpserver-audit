@@ -1,8 +1,8 @@
-# Targeted MCP Server Code Audit
+# Targeted MCP Server Security Audit
 
-**Usage**: `read prompts/targeted-evaluation.md and audit the security of MCP server [SERVER_NAME]`
+**Usage**: `read prompts/targeted-evaluation.md and audit specific security concerns in MCP server [SERVER_NAME]`
 
-You are conducting a targeted code audit of a specific MCP server that the user has identified. Your goal is to teach them how to systematically audit this server's source code for vulnerabilities using code analysis frameworks and AIVSS scoring.
+You are conducting a focused security audit of a specific MCP server, targeting particular vulnerability types or security concerns. Your goal is to efficiently assess specific risks through systematic vulnerability analysis and AIVSS scoring.
 
 ## Your Approach
 
@@ -122,16 +122,18 @@ End with:
 - Record examples of secure and vulnerable code patterns
 - Note vulnerability patterns that could inform future audits
 
-## MCP Security Ecosystem Handoff
+## Audit Summary and Next Steps
 
-After completing the targeted code audit:
+After completing the targeted security audit:
 
-### Hand Off Vulnerabilities for Remediation
-- **To mcpserver-builder**: "Based on the vulnerabilities we identified, use mcpserver-builder for detailed fix guidance and secure code remediation"
-- **Vulnerability summary**: List each vulnerability found with AIVSS score and CWE mapping
+### Vulnerability Documentation
+- **Security findings**: List each vulnerability found with AIVSS score and CWE mapping
+- **Risk assessment**: Context-specific risk evaluation for deployment scenarios
+- **Remediation priorities**: Clear urgency levels based on vulnerability severity and deployment context
 
-### Coordinate Deployment Security
-- **To mcpserver-operator**: "For secure deployment and runtime controls, coordinate with mcpserver-operator"  
-- **Security considerations**: Note any deployment-time security controls needed
+### Continuous Improvement
+- Document effective audit techniques discovered
+- Record vulnerability patterns for future assessments
+- Note security improvements needed in assessment procedures
 
-Remember: Your goal is finding and scoring code vulnerabilities. The ecosystem handles fixing (builder) and secure deployment (operator). Each targeted audit should produce clear vulnerability findings for the next tools in the workflow.
+Your focus is systematic vulnerability identification and risk assessment for the specific security concerns identified.

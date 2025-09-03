@@ -1,8 +1,8 @@
-# Comprehensive MCP Server Code Audit
+# Comprehensive MCP Server Security Audit
 
-**Usage**: `read prompts/security-assessment.md and conduct a security audit of MCP server [SERVER_NAME]`
+**Usage**: `read prompts/security-assessment.md and conduct a complete security audit of MCP server [SERVER_NAME]`
 
-You are conducting a comprehensive code audit of an MCP server to find security vulnerabilities. This is part of the Model Context Protocol Security initiative, so vulnerability detection and AIVSS scoring is your primary focus.
+You are conducting a comprehensive security audit of an MCP server with detailed vulnerability analysis, granular issue tracking, and context-aware risk assessment. Your goal is to systematically identify vulnerabilities, create individual security issue files, and provide actionable remediation guidance.
 
 ## Your Code Audit Expertise
 
@@ -12,6 +12,8 @@ You understand:
 - Dependency vulnerabilities and supply chain security in code
 - Configuration security issues in MCP server code
 - AIVSS scoring for both traditional CVSS and agentic AI risk factors
+- Context-aware risk assessment for different deployment scenarios
+- Granular security issue documentation with remediation guidance
 
 ## Pre-Audit: Load Vulnerability Checks
 
@@ -251,13 +253,13 @@ api_key = "sk-00000000000000000000000000000000"
    - How will you detect problems?
    - What's your incident response process?"
 
-## Integration with Security Ecosystem
+## Security Intelligence Integration
 
-**Connect to Broader Security Context**:
-- Document findings for `audit-db` contribution
-- Flag potential vulnerabilities for `vulnerability-db`
-- Share security intelligence with the community
-- Reference related security tools and assessments
+**Document and Share Findings**:
+- Contribute findings to vulnerability knowledge base
+- Reference historical audit patterns and results
+- Apply lessons learned from previous assessments
+- Build security intelligence for community benefit
 
 ## Red Flag Categories
 
@@ -287,14 +289,85 @@ Help users make informed security decisions:
 3. **Evaluate Controls**: What protections exist?
 4. **Accept/Mitigate Risk**: Can you live with remaining risks?
 
+## Individual Security Issue Documentation
+
+**For each security issue identified, create a separate detailed file:**
+
+### Issue File Format: `SECURITY-ISSUE-[NNN].md`
+
+Each issue file must contain:
+
+#### Issue Metadata
+```markdown
+- **Issue ID:** SECURITY-[NNN]
+- **Category:** [Information Disclosure/Resource Management/etc.]
+- **Severity:** [Low/Medium/High/Critical]
+- **CWE:** [CWE Reference]
+- **CVSS Score:** [Traditional CVSS score]/10.0
+- **AIVSS Score:** [AI-aware score]/10.0
+- **Status:** Open
+- **Found Date:** [Date]
+```
+
+#### Context-Aware Risk Assessment
+```markdown
+### Local Single-User MCP (Risk: X.X/10)
+- Risk analysis for local development usage
+- Impact assessment and recommendations
+
+### Remote SSE-Enabled Multi-User (Risk: X.X/10)  
+- Risk analysis for remote multi-user deployment
+- Network exposure and multi-tenancy concerns
+
+### Enterprise/Production Deployment (Risk: X.X/10)
+- Risk analysis for enterprise production environments
+- Compliance and operational security considerations
+```
+
+#### Detailed Technical Analysis
+- **Affected Code Location**: Specific files and line numbers
+- **Vulnerability Analysis**: Technical explanation with attack vectors
+- **Code Examples**: Current vulnerable implementation and secure alternatives
+- **CVSS/AIVSS Scoring Breakdown**: Detailed scoring rationale
+- **Remediation Recommendations**: Immediate, short-term, and long-term fixes
+- **Testing Verification**: Specific tests to verify the fix
+- **Detection and Monitoring**: How to detect and monitor for this issue
+
+### Remediation Tracking
+
+**Create a TODO.md file with:**
+- Issue priority matrix by deployment context
+- Implementation roadmap with timelines
+- Testing and verification checklists
+- Deployment-specific recommendations
+- Progress tracking and status updates
+
+## Overall Audit Report Structure
+
+**Create a comprehensive audit report with:**
+
+### Executive Summary
+- Total issues found with severity breakdown
+- Overall security score calculation
+- Context-specific recommendations
+
+### Category-Based Analysis
+- Security category scores (Authentication, Input Validation, etc.)
+- Weighted scoring methodology
+- Comparative analysis across deployment contexts
+
+### Individual Issue Summary Table
+| Issue ID | Category | Severity | AIVSS | Local Risk | Remote Risk | Enterprise Risk |
+|----------|----------|----------|-------|------------|-------------|-----------------|
+
 ## Deliverable
 
 End with:
-- Clear security risk assessment
-- Specific mitigation recommendations
-- Monitoring and incident response guidance
-- Decision recommendation (use/don't use/use with controls)
-- Security lessons learned for future assessments
+- **Individual issue files**: SECURITY-ISSUE-001.md through SECURITY-ISSUE-NNN.md
+- **Remediation tracking**: TODO.md with implementation roadmap
+- **Comprehensive audit report**: [server-name]-audit-report-detailed.md
+- **Context-specific recommendations**: Clear guidance for each deployment scenario
+- **Security category analysis**: Weighted scoring across security domains
 
 ## Post-Assessment: Continuous Improvement
 
@@ -322,21 +395,16 @@ End with:
 - Record examples of good and bad security practices encountered
 - Note server-type specific security patterns for future reference
 
-## MCP Security Ecosystem Integration
+## Audit Output Structure
 
-After completing the code audit:
+Your comprehensive audit should produce systematic documentation:
 
-### Hand Off Vulnerabilities for Fixing
-- **To mcpserver-builder**: "Based on the vulnerabilities we found, you'll want to use mcpserver-builder for detailed fix guidance and secure code remediation"
-- **Specific handoff**: List each vulnerability with its AIVSS score and CWE mapping for builder to address
+### Security Issue Documentation
+- **Individual issue files**: `SECURITY-ISSUE-001.md` through `SECURITY-ISSUE-NNN.md` with complete technical analysis
+- **Remediation tracking**: `TODO.md` with prioritized implementation roadmap
+- **Summary report**: Comprehensive audit findings with category-based scoring
 
-### Coordinate Operational Security  
-- **To mcpserver-operator**: "For runtime security controls and deployment considerations, coordinate with mcpserver-operator"
-- **Deployment notes**: Document any security controls needed at deployment time
-
-### Community Contribution
-- Save vulnerability findings to contribute to `audit-db`
-- Flag new vulnerability patterns for `vulnerability-db`  
-- Update server security profile for community benefit
-
-Remember: Your role is finding and scoring vulnerabilities. The ecosystem handles fixing (builder) and secure deployment (operator). Each audit should leave vulnerabilities clearly documented for the next tools in the workflow.
+### Key Documentation Elements
+- **Vulnerability details**: Each issue includes CWE mapping, AIVSS scoring, and specific remediation guidance
+- **Deployment context**: Risk assessments tailored to Local/Remote/Enterprise deployment scenarios  
+- **Implementation priorities**: Clear urgency levels based on deployment context and risk tolerance

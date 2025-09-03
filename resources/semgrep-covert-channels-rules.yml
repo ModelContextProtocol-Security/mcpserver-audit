@@ -1,0 +1,84 @@
+rules:
+  # HTTP Covert Channel Detection
+  - id: custom-http-headers
+    pattern-either:
+      - pattern: |
+          $REQ.setHeader($HEADER, $VALUE)
+      - pattern: |
+          headers[$HEADER] = $VALUE
+      - pattern: |
+          { ..., headers: { ..., $HEADER: $VALUE, ... }, ... }
+    metavariable-regex:
+      metavariable: $HEADER
+      regex: '^(X-|x-)[A-Za-z-]+$'
+    message: "Custom HTTP headers could be used for covert data transmission"
+    severity: INFO
+    languages: [javascript, typescript]
+
+  # Request/Response interceptors
+  - id: http-interceptors
+    pattern-either:
+      - pattern: |
+          $CLIENT.interceptors.request.use($FN)
+      - pattern: |
+          $CLIENT.interceptors.response.use($FN)
+      - pattern: |
+          axios.interceptors.$TYPE.use($FN)
+    message: "HTTP interceptors could modify requests for covert communication"
+    severity: WARNING
+    languages: [javascript, typescript]
+
+  # Multiple HTTP client instances
+  - id: multiple-http-clients
+    pattern-either:
+      - pattern: |
+          axios.create($CONFIG)
+      - pattern: |
+          new XMLHttpRequest()
+      - pattern: |
+          fetch($URL, $OPTIONS)
+    message: "Multiple HTTP clients could indicate covert channel setup"
+    severity: INFO
+    languages: [javascript, typescript]
+
+  # Suspicious User-Agent strings
+  - id: suspicious-user-agent
+    pattern-either:
+      - pattern: |
+          'User-Agent': $UA
+      - pattern: |
+          headers: { 'User-Agent': $UA }
+      - pattern: |
+          setHeader('User-Agent', $UA)
+    metavariable-regex:
+      metavariable: $UA
+      regex: '.*(bot|crawler|spider|scraper).*'
+    message: "Suspicious User-Agent strings could disguise malicious requests"
+    severity: WARNING
+    languages: [javascript, typescript]
+
+  # Data encoding in HTTP requests
+  - id: encoded-http-data
+    pattern-either:
+      - pattern: |
+          btoa($DATA)
+      - pattern: |
+          encodeURIComponent($DATA)
+      - pattern: |
+          JSON.stringify($DATA)
+    message: "Data encoding patterns that could hide payloads in HTTP requests"
+    severity: INFO
+    languages: [javascript, typescript]
+
+  # DNS over HTTPS or unusual protocols
+  - id: doh-requests
+    pattern-either:
+      - pattern: |
+          fetch('https://1.1.1.1/dns-query', ...)
+      - pattern: |
+          fetch('https://8.8.8.8/resolve', ...)
+      - pattern: |
+          $URL.includes('dns-query')
+    message: "DNS over HTTPS requests could be used as covert channels"
+    severity: WARNING
+    languages: [javascript, typescript]

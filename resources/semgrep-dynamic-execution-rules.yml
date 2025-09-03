@@ -1,0 +1,74 @@
+rules:
+  # Dynamic Code Execution Vectors
+  - id: eval-usage
+    pattern-either:
+      - pattern: eval($CODE)
+      - pattern: |
+          eval($CODE)
+      - pattern: |
+          global.eval($CODE)
+    message: "Use of eval() enables arbitrary code execution - high risk for downloaded payloads"
+    severity: ERROR
+    languages: [javascript, typescript]
+
+  # Function constructor patterns
+  - id: function-constructor
+    pattern-either:
+      - pattern: new Function($...ARGS)
+      - pattern: Function($...ARGS)
+    message: "Function constructor can execute arbitrary code strings"
+    severity: ERROR
+    languages: [javascript, typescript]
+
+  # Dynamic imports with variables
+  - id: dynamic-import-variables
+    pattern-either:
+      - pattern: import($VAR)
+      - pattern: |
+          await import($VAR)
+    message: "Dynamic imports with variables could load malicious modules"
+    severity: WARNING
+    languages: [javascript, typescript]
+
+  # setTimeout/setInterval with code strings
+  - id: timeout-code-execution
+    pattern-either:
+      - pattern: setTimeout($CODE, $TIME)
+      - pattern: setInterval($CODE, $TIME)
+    metavariable-type:
+      metavariable: $CODE
+      type: string
+    message: "setTimeout/setInterval with code strings enables delayed execution"
+    severity: WARNING
+    languages: [javascript, typescript]
+
+  # VM execution contexts (Node.js specific)
+  - id: vm-code-execution
+    pattern-either:
+      - pattern: |
+          $VM.runInNewContext($CODE, ...)
+      - pattern: |
+          $VM.runInThisContext($CODE, ...)
+      - pattern: |
+          vm.runInNewContext($CODE, ...)
+      - pattern: |
+          vm.runInThisContext($CODE, ...)
+    message: "VM context execution can run arbitrary code - potential evasion technique"
+    severity: ERROR
+    languages: [javascript, typescript]
+
+  # Child process with dynamic arguments
+  - id: child-process-dynamic
+    pattern-either:
+      - pattern: |
+          spawn($CMD, $ARGS, ...)
+      - pattern: |
+          exec($CMD, ...)
+      - pattern: |
+          execSync($CMD, ...)
+    metavariable-type:
+      metavariable: $CMD
+      type: string
+    message: "Child process execution with variables could run downloaded executables"
+    severity: WARNING
+    languages: [javascript, typescript]
