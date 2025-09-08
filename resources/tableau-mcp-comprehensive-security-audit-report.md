@@ -142,7 +142,7 @@ The Tableau API ecosystem includes:
 
 The security assessment utilized the mcpserver-audit framework with:
 - Systematic vulnerability checks with CWE mappings
-- AIVSS (Agentic AI Vulnerability Scoring System) scoring
+- AIVSS (AI Vulnerability Scoring System) scoring
 - Context-aware risk assessment for different deployment scenarios
 - Comprehensive code review following MCP security best practices
 

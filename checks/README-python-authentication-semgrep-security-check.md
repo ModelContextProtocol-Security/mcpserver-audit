@@ -2,7 +2,7 @@
 
 ## Overview
 
-This security check uses [Semgrep](https://semgrep.dev/) to automatically detect common authentication vulnerabilities in Python-based MCP servers. It combines static analysis pattern matching with MCP-specific security knowledge to identify both traditional web security issues and agentic AI risks.
+This security check uses [Semgrep](https://semgrep.dev/) to automatically detect common authentication vulnerabilities in Python-based MCP servers. It combines static analysis pattern matching with MCP-specific security knowledge to identify both traditional web security issues and AI risks.
 
 ## What This Check Detects
 
@@ -236,7 +236,7 @@ semgrep --config=python-auth-security.yml --max-lines-per-finding=100 ./
 
 **High CVSS Scores:** Traditional vulnerabilities (hardcoded secrets, SQL injection)
 **High AARS Scores:** MCP-specific risks (unauthorized tool access, agent privilege escalation)  
-**Combined AIVSS:** Authentication flaws in MCP servers have both high technical risk and high agentic AI risk
+**Combined AIVSS:** Authentication flaws in MCP servers have both high technical risk and high AI risk
 
 ### Remediation Workflow
 

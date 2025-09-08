@@ -28,7 +28,7 @@ You have access to security assessment resources:
 
 ### 1. Load Relevant Security Checks
 - **Identify applicable checks**: Determine which security assessments are relevant for this MCP server
-- **Review AIVSS scoring capability**: "These checks can assess both traditional CVSS vulnerabilities and agentic AI risks (AARS)"
+- **Review AIVSS scoring capability**: "These checks can assess both traditional CVSS vulnerabilities and AI risks (AARS)"
 - **Set security assessment expectations**: Explain what we can assess with high confidence vs. what requires expert security analysis
 
 ### 2. Apply Security Assessment Framework
@@ -36,7 +36,7 @@ You have access to security assessment resources:
 
 ### 3. Guide Collaborative Security Evaluation
 - **Ask security-focused questions**: Help users apply security assessment criteria themselves
-- **Explain AIVSS scoring rationale**: "We can score traditional CVSS factors, but also need to consider agentic AI risks like autonomy and tool access"
+- **Explain AIVSS scoring rationale**: "We can score traditional CVSS factors, but also need to consider AI risks like autonomy and tool access"
 - **Teach threat pattern recognition**: Help users spot security vulnerabilities, attack vectors, and threat indicators
 
 ### 4. Context-Aware Security Risk Assessment
@@ -57,7 +57,7 @@ You have access to security assessment resources:
 ### Security Assessment Quality Review
 - "How effective were our security checks for this MCP server?"
 - "Were there security areas where we lacked good assessment guidance?"
-- "What MCP server or agentic AI specific security concerns did we encounter that aren't well-covered by existing checks?"
+- "What MCP server or AI specific security concerns did we encounter that aren't well-covered by existing checks?"
 
 ### Security Knowledge Improvement Opportunities
 **Ask for user permission before making changes:**
@@ -74,7 +74,7 @@ You have access to security assessment resources:
 
 **For Security Assessment Novices:**
 - [Key security concepts to emphasize for beginners, including why AIVSS matters for AI agents]
-- [Common security misconceptions to correct, especially around agentic AI risks]
+- [Common security misconceptions to correct, especially around AI risks]
 - [Fundamental security assessment skills to develop]
 
 **For Security Professionals:**
@@ -131,7 +131,7 @@ Remember: Your role is finding and scoring vulnerabilities with granular documen
 
 For AI assistants conducting security assessments, these markdown versions of the standards are optimized for AI processing:
 
-- **AIVSS (Agentic AI Vulnerability Scoring System)**: https://github.com/CloudSecurityAlliance-DataSets/dataset-public-laws-regulations-standards/tree/main/tools-resources/owasp.org/AIVSS
+- **AIVSS (AI Vulnerability Scoring System)**: https://github.com/CloudSecurityAlliance-DataSets/dataset-public-laws-regulations-standards/tree/main/tools-resources/owasp.org/AIVSS
 - **CVSS v4.0 (Common Vulnerability Scoring System)**: https://github.com/CloudSecurityAlliance-DataSets/dataset-public-laws-regulations-standards/tree/main/tools-resources/first.org/CVSS
 
 **Template Notes:**
@@ -139,5 +139,5 @@ For AI assistants conducting security assessments, these markdown versions of th
 - Integrate AIVSS scoring framework as the primary approach
 - Include specific security examples and threat scenarios for the prompt type
 - Reference relevant security check files and resource materials
-- Emphasize both traditional CVSS vulnerabilities and agentic AI risks (AARS factors)
+- Emphasize both traditional CVSS vulnerabilities and AI risks (AARS factors)
 - Use the above reference materials to ensure accurate AIVSS and CVSS scoring

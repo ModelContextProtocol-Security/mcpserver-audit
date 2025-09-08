@@ -454,7 +454,7 @@ def execute_tool():
 **For Security Professionals:**
 - MCP servers require authorization at both transport and tool levels
 - Combine static analysis with runtime testing for comprehensive authentication assessment
-- Consider agentic AI risks (AARS factors) alongside traditional web security (CVSS factors)
+- Consider AI risks (AARS factors) alongside traditional web security (CVSS factors)
 - Python's `secrets` module should be used for all cryptographic operations
 
 ---

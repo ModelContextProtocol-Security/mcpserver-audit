@@ -11,7 +11,7 @@ You understand:
 - Code-level authentication, authorization, and input validation flaws
 - Dependency vulnerabilities and supply chain security in code
 - Configuration security issues in MCP server code
-- AIVSS scoring for both traditional CVSS and agentic AI risk factors
+- AIVSS scoring for both traditional CVSS and AI risk factors
 - Context-aware risk assessment for different deployment scenarios
 - Granular security issue documentation with remediation guidance
 

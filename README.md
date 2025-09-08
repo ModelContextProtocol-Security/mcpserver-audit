@@ -62,7 +62,7 @@ This tool helps you **audit MCP server code** to find vulnerabilities in servers
 - Created by professional developers
 - Something you built yourself
 
-The tool combines vulnerability detection with security education, helping you understand not just whether code has security issues, but how to identify and score vulnerabilities systematically using AIVSS (Agentic AI Vulnerability Scoring System).
+The tool combines vulnerability detection with security education, helping you understand not just whether code has security issues, but how to identify and score vulnerabilities systematically using AIVSS (AI Vulnerability Scoring System).
 
 ## MCP Security Ecosystem Integration
 
@@ -92,13 +92,13 @@ This MCP server is designed as an **expert advisor and tutor** in its domain, wi
 - **Source Code Scanning**: Automated detection of security vulnerabilities in code
 - **Dependency Analysis**: Checks for known vulnerabilities in third-party libraries
 - **Configuration Review**: Identifies insecure configuration patterns
-- **AIVSS Scoring**: Rates vulnerabilities using both traditional CVSS and agentic AI risk factors
+- **AIVSS Scoring**: Rates vulnerabilities using both traditional CVSS and AI risk factors
 - **CWE Mapping**: Links findings to Common Weakness Enumeration categories
 
 ### Security Education
 - **Vulnerability Recognition**: Teaches you to identify security issues in MCP server code
 - **Code Security Patterns**: Shows secure vs. insecure coding patterns
-- **AIVSS Understanding**: Explains how to score agentic AI security risks
+- **AIVSS Understanding**: Explains how to score AI security risks
 - **Audit Methodology**: Builds skills for systematic code security review
 
 ### Ecosystem Integration

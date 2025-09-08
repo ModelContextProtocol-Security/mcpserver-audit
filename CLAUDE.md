@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Purpose
 
-This is **mcpserver-audit**, a security auditing tool for Model Context Protocol (MCP) servers and Claude Desktop Extensions. It serves as an expert security tutor that teaches users how to audit MCP server source code for vulnerabilities using AIVSS (Agentic AI Vulnerability Scoring System) scoring.
+This is **mcpserver-audit**, a security auditing tool for Model Context Protocol (MCP) servers and Claude Desktop Extensions. It serves as an expert security tutor that teaches users how to audit MCP server source code for vulnerabilities using AIVSS (AI Vulnerability Scoring System) scoring.
 
 **Key Role**: Find security vulnerabilities in existing code (not fix them - that's handled by mcpserver-builder)
 
@@ -75,7 +75,7 @@ Each security check follows standardized format:
 
 ### AIVSS Scoring
 - **Primary approach** for vulnerability scoring in this system
-- Extends CVSS v4.0 with agentic AI risk factors (AARS)
+- Extends CVSS v4.0 with AI risk factors (AARS)
 - Reference materials: CloudSecurityAlliance datasets for AI-optimized markdown versions
 
 ### Educational Philosophy  

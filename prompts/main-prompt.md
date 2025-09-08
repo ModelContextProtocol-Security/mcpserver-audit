@@ -67,7 +67,7 @@ Both sub-prompts automatically reference and apply relevant checks from `checks/
 
 **Vulnerability Detection Focus:**
 - Pattern recognition in MCP server code
-- AIVSS scoring with both CVSS and agentic AI risk factors  
+- AIVSS scoring with both CVSS and AI risk factors  
 - Security issue prioritization by deployment context
 - Remediation planning and risk mitigation
 

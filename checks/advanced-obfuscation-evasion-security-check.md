@@ -253,7 +253,7 @@ const y = x.split('').reverse().join('');
 
 For AI assistants conducting security assessments, these markdown versions of the standards are optimized for AI processing:
 
-- **AIVSS (Agentic AI Vulnerability Scoring System)**: https://github.com/CloudSecurityAlliance-DataSets/dataset-public-laws-regulations-standards/tree/main/tools-resources/owasp.org/AIVSS
+- **AIVSS (AI Vulnerability Scoring System)**: https://github.com/CloudSecurityAlliance-DataSets/dataset-public-laws-regulations-standards/tree/main/tools-resources/owasp.org/AIVSS
 - **CVSS v4.0 (Common Vulnerability Scoring System)**: https://github.com/CloudSecurityAlliance-DataSets/dataset-public-laws-regulations-standards/tree/main/tools-resources/first.org/CVSS
 
 ---

@@ -23,7 +23,7 @@ cwe-primary: [XXX]  # Primary CWE this check addresses
 
 ## Security Purpose & Context
 
-[Explain why this security aspect matters for MCP server risk assessment, including both traditional vulnerabilities and agentic AI risks]
+[Explain why this security aspect matters for MCP server risk assessment, including both traditional vulnerabilities and AI risks]
 
 **Security Impact**: [How this vulnerability affects overall security posture - Critical/High/Medium/Low impact]
 **When to Use**: [Specific security scenarios where this check is most valuable]
@@ -39,7 +39,7 @@ cwe-primary: [XXX]  # Primary CWE this check addresses
 
 ### Medium Confidence Security Risks  
 - **Probable Vulnerabilities**: [Patterns that suggest security risks but require interpretation]
-- **AARS Factor Assessment**: [Agentic AI risk factors that depend on server context]
+- **AARS Factor Assessment**: [AI risk factors that depend on server context]
 - **Contextual Security Signals**: [Security indicators that depend on threat model]
 
 ### Low Confidence / Expert Analysis Required
@@ -58,9 +58,9 @@ cwe-primary: [XXX]  # Primary CWE this check addresses
 
 ### AIVSS Risk Factor Assessment
 ```bash
-# [Commands to assess agentic AI risk factors: autonomy, tool use, etc.]
+# [Commands to assess AI risk factors: autonomy, tool use, etc.]
 # [Guidance for scoring AARS factors (0.0, 0.5, 1.0)]
-# [Context analysis for agentic behavior patterns]
+# [Context analysis for AI behavior patterns]
 ```
 
 **Automation Reliability**: [How much to trust automated security results vs. expert security review]
@@ -69,13 +69,13 @@ cwe-primary: [XXX]  # Primary CWE this check addresses
 
 ### Step-by-Step Security Checklist
 - [ ] **CVSS Base Score Assessment**: [Traditional vulnerability scoring - High confidence]
-- [ ] **AARS Factor Evaluation**: [Agentic AI risk factor scoring - Medium confidence]  
+- [ ] **AARS Factor Evaluation**: [AI risk factor scoring - Medium confidence]  
 - [ ] **Threat Model Integration**: [How this fits user's threat model - Expert judgment]
 - [ ] **Context-Specific Risk Assessment**: [Deployment-specific security considerations]
 
 ### Key Security Questions to Ask
 - **High Confidence (CVSS)**: "[Clear vulnerability question with objective answer]"
-- **Medium Confidence (AARS)**: "[Agentic AI risk question requiring interpretation]"  
+- **Medium Confidence (AARS)**: "[AI risk question requiring interpretation]"  
 - **Expert Analysis**: "[Question requiring specialized security expertise]"
 
 ### Human Security Verification Points
@@ -128,7 +128,7 @@ cwe-primary: [XXX]  # Primary CWE this check addresses
 **Impact on Security Posture**: [How this vulnerability affects overall server security]
 **Risk Implications**: [What security problems arise when this area is weak]
 **Threat Actor Interest**: [Why attackers would target this vulnerability]
-**AIVSS Relevance**: [How this relates to both traditional and agentic AI security risks]
+**AIVSS Relevance**: [How this relates to both traditional and AI security risks]
 
 ### Supporting Security Evidence
 **Research Basis**: [Academic/industry security research supporting this assessment]
@@ -197,7 +197,7 @@ cwe-primary: [XXX]  # Primary CWE this check addresses
 
 For AI assistants conducting security assessments, these markdown versions of the standards are optimized for AI processing:
 
-- **AIVSS (Agentic AI Vulnerability Scoring System)**: https://github.com/CloudSecurityAlliance-DataSets/dataset-public-laws-regulations-standards/tree/main/tools-resources/owasp.org/AIVSS
+- **AIVSS (AI Vulnerability Scoring System)**: https://github.com/CloudSecurityAlliance-DataSets/dataset-public-laws-regulations-standards/tree/main/tools-resources/owasp.org/AIVSS
 - **CVSS v4.0 (Common Vulnerability Scoring System)**: https://github.com/CloudSecurityAlliance-DataSets/dataset-public-laws-regulations-standards/tree/main/tools-resources/first.org/CVSS
 
 ---
