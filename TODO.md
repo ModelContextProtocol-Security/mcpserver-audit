@@ -59,6 +59,15 @@
 
 ## System Architecture Improvements
 
+### Implement Audit Exceptions Framework
+**Priority: High**
+- [ ] Create `mcpserver-audit/exceptions/` directory for structured exception definitions (YAML files).
+- [ ] Design the schema for exception files, including `check_id`, `justification`, `scope` (paths), and `status`.
+- [ ] Create a new `prompts/exception-handling.md` prompt to guide the AI on how to process and apply these exceptions.
+- [ ] Update the main audit workflow to consult the exceptions framework before reporting a finding.
+- [ ] Add a "Suppressed Findings" section to the final audit report format.
+- [ ] Create the first exception rule for "Hardcoded Placeholder Keys in Test Files" as a proof-of-concept.
+
 ### Progressive Disclosure Implementation
 **Priority: Medium**
 - [ ] Implement skill-level assessment mechanism
