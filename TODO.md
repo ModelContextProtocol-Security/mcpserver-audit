@@ -68,6 +68,11 @@
 - [ ] Add a "Suppressed Findings" section to the final audit report format.
 - [ ] Create the first exception rule for "Hardcoded Placeholder Keys in Test Files" as a proof-of-concept.
 
+### Formalize Workflow Architecture
+**Priority: Medium**
+- [ ] Investigate promoting the `WORKFLOW.md` concept into a top-level `/workflows` directory.
+- [ ] Define a schema for workflow files that orchestrate personas, frameworks, and skills.
+
 ### Progressive Disclosure Implementation
 **Priority: Medium**
 - [ ] Implement skill-level assessment mechanism
