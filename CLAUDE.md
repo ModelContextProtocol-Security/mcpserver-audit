@@ -26,7 +26,7 @@ This is a **prompt-driven security education system** built around three core co
 - Each check targets specific CWE categories with AIVSS scoring
 - Include concrete detection scripts, risk assessment, and remediation guidance
 - **Format**: Obsidian-style markdown with CWE mappings and vulnerability-db integration
-- **Current coverage**: Credential management, network port binding (many gaps remain)
+- **Current coverage** (~12 checks): application-level (credential management, network port binding, dynamic content execution, advanced obfuscation/evasion, HTTP client resilience) and infrastructure/supply-chain (Docker, Docker Compose, Kubernetes, CI secrets, Python auth via Semgrep). Gaps remain — see `GAPS.md`.
 
 ### 3. Knowledge Frameworks (`research/`, `resources/`, `tools/`)
 - Supporting materials for threat modeling, risk assessment, and compliance mapping
@@ -113,10 +113,19 @@ checks/           # Technical vulnerability detection procedures
 ├── CHECK-TEMPLATE.md          # Template for new checks
 └── README.md                  # Check development guidelines
 
+exceptions/       # Prompts for handling audit exceptions/false-positive triage
 research/         # Draft security research and exploratory work
 resources/        # Security checklists and assessment frameworks
 tools/           # Future MCP tool implementations
 ```
+
+## Key Reference Documents
+
+Beyond the prompts and checks, several top-level docs drive how the system evolves:
+- **WORKFLOW.md**: The assessment-improvement cycle — how running an audit feeds back into new/better checks and prompts. Read this to understand the intended operating loop.
+- **GAPS.md**: Security domains not yet covered, derived from analyzing real MCP server repos (dated snapshots). The authoritative list of where new checks are needed.
+- **TODO.md**: Prioritized backlog (e.g. end-to-end PoC demos, vulnerability-db submission docs).
+- **DRAFT-PROMPT-FORMAT-REPORT-*.md**: Exploratory analyses (codex/gemini) of prompt formatting — background, not authoritative.
 
 ## Contributing Security Knowledge
 
